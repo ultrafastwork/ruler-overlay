@@ -1,0 +1,37 @@
+# Augment-specific ignores (additional to .gitignore)
+
+# Lock files - not useful for code analysis
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# TypeScript build info - not source code
+*.tsbuildinfo
+
+# Large media files that don't need code analysis
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.ico
+*.webp
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.mp3
+*.wav
+*.flac
+
+# Auto-generated documentation
+CHANGELOG.md
+HISTORY.md
+API.md
+
+# Test fixtures and mock data
+test/fixtures/
+test/mocks/
+__fixtures__/
+__mocks__/

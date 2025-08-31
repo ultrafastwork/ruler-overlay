@@ -1,0 +1,26 @@
+{
+  "name": "ruler-overlay",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A transparent grid overlay tool like Photoshop rulers, built with Electron",
+  "main": "index.js",
+  "bin": {
+    "ruler-overlay": "index.js"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "overlay",
+    "grid",
+    "ruler"
+  ],
+  "author": "Bagus",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "electron": "^32.3.3"
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
+}
