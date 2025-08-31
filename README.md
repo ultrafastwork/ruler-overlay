@@ -6,12 +6,12 @@ Useful for measuring, aligning, or comparing UI elements on screen.
 ---
 
 ## ✨ Features
-- Transparent, frameless, always-on-top overlay window  
-- Semi-transparent grid lines using pure CSS gradients  
-- Configurable grid size (10px, 20px, 50px)  
-- **Global Hotkeys**:  
-  - `Ctrl+Alt+G` → Toggle overlay visibility  
-  - `Ctrl+Alt+C` → Toggle click-through mode (mouse clicks pass through)  
+- Transparent, frameless, always-on-top overlay window
+- Semi-transparent grid lines using pure CSS gradients
+- Configurable grid size (10px, 20px, 50px)
+- **Global Hotkeys**:
+  - `Ctrl+Alt+G` → Toggle overlay visibility
+  - `Ctrl+Alt+C` → Toggle click-through mode (mouse clicks pass through)
 - Adjustable grid size in overlay:
   - Press **1** → 10px grid
   - Press **2** → 20px grid
