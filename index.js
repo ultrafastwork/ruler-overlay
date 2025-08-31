@@ -3,10 +3,11 @@ import { app, BrowserWindow, globalShortcut, screen, ipcMain } from "electron";
 
 let win = null;
 let clickThrough = false;
-let isVisible = true;
+let isVisible = false; // Start hidden, so first Ctrl+Alt+G shows the overlay
 
 const createWindow = () => {
 	const { width, height } = screen.getPrimaryDisplay().size;
+	console.log("Creating window with dimensions:", width, "x", height);
 
 	win = new BrowserWindow({
 		x: 0,
@@ -34,20 +35,32 @@ const createWindow = () => {
 
 	// Start maximized (not fullscreen, so still resizable)
 	win.setBounds({ x: 0, y: 0, width, height });
+
+	// Hide window on startup - user will press Ctrl+Alt+G to show it
+	win.hide();
+
+	console.log("Window created and hidden - press Ctrl+Alt+G to show");
 };
 
 const registerShortcuts = () => {
 	// Toggle overlay visibility
 	globalShortcut.register("Control+Alt+G", () => {
-		if (!win) return;
+		console.log("Ctrl+Alt+G pressed! Current isVisible:", isVisible);
+		if (!win) {
+			console.log("No window found!");
+			return;
+		}
 		isVisible = !isVisible;
+		console.log("Toggling visibility to:", isVisible);
 
 		if (isVisible) {
 			win.show();
 			if (!clickThrough) win.setFocusable(true);
 			win.setAlwaysOnTop(true, "screen-saver");
+			console.log("Window shown");
 		} else {
 			win.hide();
+			console.log("Window hidden");
 		}
 	});
 
